@@ -17,6 +17,7 @@ body {
 
 .section {
 	padding-top: 20px;
+	position: relative;
 }
 
 .section u {
@@ -28,8 +29,9 @@ body {
 }
 
 .section .callout {
-	position: relative;
-	left: 500px;
+	position: absolute;
+	left: 550px;
+	top: 10%;
 	width: 300px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -80,6 +82,11 @@ a:link {
 	font-size: .3em;
 }
 
-ul {
+ul, ol {
 	padding-left: 25px;
+}
+
+li {
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
