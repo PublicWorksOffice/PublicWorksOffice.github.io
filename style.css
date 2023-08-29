@@ -18,6 +18,7 @@ body {
 .section {
 	padding-top: 20px;
 	position: relative;
+	clear: both;
 }
 
 .section u {
@@ -79,6 +80,34 @@ a:link {
 
 sup {
 	font-size: .25em;
+}
+
+
+.work {
+	padding: 0px;
+	margin: 0px;
+}
+
+.work li {
+	width: 240px;
+	height: 275px;
+	list-style-type: none;
+	background-color: #FFFFFF;
+	margin: 10px;
+	margin-left: 0px;
+	float: left;
+}
+
+.work li p {
+	padding: 10px;
+	padding-top: 0px !important;
+	font-size: .8em;
+}
+
+.work li img {
+	width: 220px;
+	padding: 10px;
+	padding-bottom: 0px !important;
 }
 
 #footnotes {
