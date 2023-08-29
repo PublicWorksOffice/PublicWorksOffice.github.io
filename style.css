@@ -90,7 +90,7 @@ sup {
 
 .work li {
 	width: 240px;
-	height: 275px;
+	height: 265px;
 	list-style-type: none;
 	background-color: #FFFFFF;
 	margin: 10px;
@@ -100,14 +100,23 @@ sup {
 
 .work li p {
 	padding: 10px;
-	padding-top: 0px !important;
+	padding-top: 0px;
 	font-size: .8em;
 }
 
-.work li img {
+.work li span {
+	height: 150px;
 	width: 220px;
+	overflow: hidden;
+	display: inline-block;
 	padding: 10px;
-	padding-bottom: 0px !important;
+	padding-bottom: 0px;
+}
+
+.work li span img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 #footnotes {
