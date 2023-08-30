@@ -15,6 +15,31 @@
 	<link rel="stylesheet" href="https://use.typekit.net/wnp5kzb.css">
 
 	<link href='style.css' rel='stylesheet' type='text/css' media="all">
+
+	<script>
+	  $(document).ready(function() {
+		var allFilters = [];
+
+		$(".filters a").each(function(i, e) {
+			allFilters.push(e.className);
+
+			$(e).on("click", function(evt) {
+				evt.preventDefault();
+
+				var filter = this.getAttribute("class");
+				
+				$.each(allFilters, function(i, filterIterator) {
+					if(filterIterator === filter || filterIterator === "") {
+						$(".work ." + filterIterator).show();
+						return true;
+					}
+
+					$(".work ." + filterIterator).hide();
+				})
+			});
+		});
+	  });
+	</script>
 </head>
 <body>
 	<div id="top">
@@ -24,16 +49,14 @@
 
 	<div class="section">
 		<p>	
-			Public Works Office (PwO) exists to "make technology public"<sup>1</sup>: open, interoperable, inclusive, and user-centric.
+			Public Works Office (PwO) exists to "make technology public"<sup>1</sup>: interoperable, inclusive, user-centric; and often deployed in public spaces. 
 		</p>
 		<p>
-			PwO is a technical consultancy that provides advice related to software product development, technology integration and digital customer experience. 
+			PwO is a technical consultancy that specializes in 0->1 product development and technology strategy in complex stakeholder environments, frequently touching government or the built environment, and often 
+			related to a client's customer experience and/or innovation initiatives. Above all, PwO is thoughtful.
 		</p>
 		<p>
-			PwO has particular experience with open source (the integration of, as well as developing new communities), systems architecture based on open standards and interfaces, and transportation: trip planners, real-time arrival prediction systems, customer experience, digital signage and content, and data.			
-		</p>
-		<p>
-			At PwO, we believe people come together to do great, big things as one "body". Government is one of the best examples, and we're here to help those on the inside working on great, big things.
+			Past work has been with clients in public/mass transit, engineering firms, concessionaires (e.g. out-of-home advertising), higher education/research institutions, technology firms, real estate and private equity.
 		</p>
 		<p>
 			Wondering if PwO can help? Say hello at <a href="mailto:hello@publicworksoffice.com">hello@publicworksoffice.com</a>
@@ -43,27 +66,22 @@
 	<div class="section">
 		<u>PwO Services</u>
 		<p>
-				<em>Technology Strategy</em>
-				<ul>
-					<li>Product Strategy, including roadmapping, definition and measurement of KPIs and product feature definition</li>
-					<li>Agile Development Coaching, including Scrum and delivery processes</li>
-					<li>Interim CTO/CIO</li>
-				</ul>
+			<em>0->1 Product Development</em>
+			<ul>
+				<li>Product Strategy, including roadmapping, feature definition, market fit, partnerships, and cost estimation</li>
+				<li>Systems Architecture, particularly public cloud and standards-based/open architectures</li>
+				<li>Software Development, front- and back-end "player-coach"</li>
+				<li>DevOps, including cloud migrations, containerization, data pipelines and system administration</li>
+			</ul>
 
-				<em>Product Development</em>
-				<ul>
-					<li>Systems Architecture, particularly cloud and standards-based/open architectures</li>
-					<li>Software Development, both front- and back-end "player-coach"</li>
-					<li>DevOps, including cloud migrations, containerization, data pipelines and system administration</li>
-				</ul>
+			<em>Technology Strategy</em>
+			<ul>
+				<li>Agile Development Coaching, including Scrum and delivery processes</li>
+				<li>Interim CTO/CIO: technology and data governance, procurement, enterprise architecture</li>
+				<li>RFPs: product-forward responses as a vendor; technical SME during procurement as a buyer</li>
+			</ul>
 
-				<em>Public Procurements</em>
-				<ul>
-					<li>RFP Responses</li>
-					<li>RFP Development</li>
-				</ul>
-
-				<em>PwO works under scope-of-work and staff augmentation arrangements, depending on the nature of the engagement.</em>
+			<em>PwO works under scope-of-work and staff augmentation arrangements, depending on the nature of the engagement</em>
 		</p>
 	</div>
 
@@ -71,82 +89,82 @@
 		<u>Past Work</u>
 
 		<ul class="work">
-			<li>
+			<li class="strategy">
 				<span><img src="work/la-metro.jpg"/></span>
 				<p>
-					Actionable roadmap to leverage digital advertising screens to improve customer communications and serve double-duty at LA Metro: growing and retaining ridership, while generating new revenue.
+					Actionable roadmap to leverage digital advertising screens to improve customer communications and serve double-duty at LA Metro: growing and retaining ridership, while generating new revenue. With Intersection.
 				</p>
 			</li>
-			<li>
+			<li class="strategy">
 				<span><img src="work/sidewalk.png"/></span>
 				<p>
-					Technology product vision for a next generation city built "from the Internet up". Presented to the Alphabet board and submitted, in part, as Sidewalk Labs' vision for Sidewalk Toronto.
+					Technology product vision for a next generation city built "from the Internet up". Presented to the Alphabet board and submitted, in part, as Sidewalk Labs' vision for Sidewalk Toronto. With Intersection.
 				</p>
 			</li>
-			<li>
+			<li class="product">
 				<span><img src="work/pa-one-call.png"/></span>
 				<p>
 					Pilot kiosk-based program to connect veterans with transportation and economic opportunity in York, PA. Part of USDOT's Veterans Transportation and Community Living Initiative (VTCLI). With Cambridge Systematics.
 				</p>
 			</li>
 
-			<li>
+			<li class="product art">
 				<span><img src="work/walk-shed.png"/></span>
 				<p>
 					A custom route planner designed to route users through as many "<a href="https://www.nyc.gov/site/buildings/safety/sidewalk-sheds.page" target="_new">sidewalk sheds</a>" as possible to avoid sun, rain or other adverse environmental conditions. Presented as part of PwO's talk titled "Against Efficiency" at Conflux 2012.
 				</p>
 			</li>
 
-			<li>
+			<li class="product strategy">
 				<span><img src="work/bustime.jpg"/></span>
 				<p>
 					A machine-learning powered system to match buses observed on the streets of New York City to the bus schedule, allowing realtime arrival predictions to be given to customers. With OpenPlans and Cambridge Systematics.
 				</p>
 			</li>
 
-			<li>
+			<li class="strategy">
 				<span><img src="work/citibike.jpg"/></span>
 				<p>
 					Pre-acquisition advisory work on scaling, reliability and transition of New York City's bikeshare. With Control Group.
 				</p>
 			</li>
 
-			<li>
+			<li class="art">
 				<span><img src="work/cup.jpg"/></span>
 				<p>
-					A 15-week investigation into "<a href="https://urbanomnibus.net/2011/08/fast-tracked-who-decides-where-the-subway-goes/" target="_new">Who Decides Where The Subway Goes?</a>" with New York City high-school students. With CUP, as PwO with Alexandra Woolsey-Puffer. 
+					A 15-week investigation into "<a href="https://urbanomnibus.net/2011/08/fast-tracked-who-decides-where-the-subway-goes/" target="_new">Who Decides Where The Subway Goes?</a>" with New York City high-school students. With The Center for Urban Pedagogy and Alexandra Woolsey-Puffer. 
 				</p>
 			</li>
-			<li>
+			<li class="product">
 				<span><img src="work/soundtransit.png"/></span>
 				<p>
 					Deployment of OpenTripPlanner for Sound Transit in Seattle, including a customized web front-end built on the OpenGeo stack.
 				</p>
 			</li>
 
-			<li>
+			<li class="product">
 				<span><img src="work/gigapan.jpg"/></span>
 				<p>
 					A Flickr-like website to share gigapixel+ images, taken by a unique camera rig (shown above). Includes software to take, stitch and upload images to the web. (Photo by Alan Levine) 
 				</p>
 			</li>
-			<li>
+			<li class="product art">
 				<span><img src="work/mapmover.png"/></span>
 				<p>
 					A robotic visualization of the aural landscape of Pittsburgh, collected via MapHub and displayed in Karlsruhe Germany. Exhibited at ZKM's exhibit "Making Things Public" in 2005.
 				</p>
 			</li>
-			<li>
+			<li class="product art">
 				<span><img src="work/maphub-computer.png"/></span>
 				<p>
-					A wiki-like, community-editable geographic information system (GIS) to encourage grassroots neighborhood data sharing to encourage more equitable, inclusive development.
+					A wiki-like, community-editable geographic information system (GIS) to encourage grassroots neighborhood data sharing to encourage more equitable, inclusive development. IP acquired by RouteMatch (Uber) and the WPP Group.
 				</p>
 			</li>
 
-			<li>
+			<li class="product">
 				<span><img src="work/kc.png"/></span>
 				<p>
-					Web-based decision support and incident response system for emergency responders in Western Pennsylvania (FEMA Region 13).
+					Web-based decision support and incident response system for emergency responders in Western Pennsylvania (FEMA Region 13). Acquired by Nusura.
 				</p>
 			</li>
 		</ul>
@@ -157,10 +175,10 @@
 		<u>PwO's Values (draft)</u>
 
 		<ol>
+			<li>Listen: a big part of thoughtfulness is sharing your opinion, but recognizing needs other than your own. </li>
 			<li>Understand the details. The details are often where opportunity lies: to do something new, to do something faster, to accomplish the goal you set out to achieve.</li>
 			<li>Strengthen our clients: like a good camper, leave a place better than you found it. Progress breeds more opportunity.</li>
 			<li>Be honest--it's okay to disagree. The truth always wins in the end, why ignore it? Develop a hypothesis about the world and test it.</li>
-			<li>Be thoughtful: most often this means helping our clients make the best decision for them given constraints. Nothing is perfect, and nothing is final.</li>
 		</ol>
 
 
