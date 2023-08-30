@@ -1,22 +1,21 @@
 html {
 	font-family: 'Roboto Mono', serif;
-	font-size: .65em;
+	font-size: .8em;
 	line-height: 1.2em;
 
 	background-color: #f4f3f4;
 	color: #464646;
-	zoom: 125%;
 }
 
 body {
 	margin: 0;
 	padding: 30px;
 	padding-bottom: 100px;
-	max-width: 500px;
+	max-width: 580px;
 }
 
 .section {
-	padding-top: 20px;
+	padding-top: 40px;
 	position: relative;
 	clear: both;
 }
@@ -31,17 +30,17 @@ body {
 
 .section .callout {
 	position: absolute;
-	left: 550px;
-	top: 10%;
-	width: 300px;
+	left: calc(100% + 30px);
+	top: 50px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 .section .callout span {
-	width: 500px;
+	display: block;
 	font-style: italic;
 	font-size: .8em;
+	line-height: 120%;
 }
 
 a,
@@ -57,7 +56,7 @@ a:link {
 
 #top {
 	width: 275px;
-	height: 75px;
+	height: 50px;
 }
 
 #top img {
@@ -67,7 +66,7 @@ a:link {
 
 #top span {
 	width: 200px;
-	padding: 10px;
+	padding: 7px;
 	float: left;
 
 	font-family: "futura-pt", sans-serif;
@@ -89,24 +88,25 @@ sup {
 }
 
 .work li {
-	width: 240px;
-	height: 265px;
+	width: 270px;
+	height: 350px;
 	list-style-type: none;
 	background-color: #FFFFFF;
-	margin: 10px;
+	margin: 15px;
 	margin-left: 0px;
+	margin-bottom: 0px;
 	float: left;
 }
 
 .work li p {
 	padding: 10px;
 	padding-top: 0px;
-	font-size: .8em;
+	font-size: .9em;
 }
 
 .work li span {
-	height: 150px;
-	width: 220px;
+	height: 175px;
+	width: 250px;
 	overflow: hidden;
 	display: inline-block;
 	padding: 10px;
@@ -121,7 +121,7 @@ sup {
 
 #footnotes {
 	border-top: 1px solid #C0C0C0;
-	margin-top: 50px;
+	margin-top: 150px;
 	font-size: .8em;
 }
 
@@ -137,4 +137,11 @@ ul, ol {
 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
+}
+
+@media (max-width:960px) { 
+	.section .callout {
+		position: static;
+		width: 300px;
+	}
 }
