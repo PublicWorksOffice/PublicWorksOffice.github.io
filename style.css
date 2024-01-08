@@ -24,25 +24,6 @@ body {
 	display: block;
 }
 
-.section .callout img {
-	width: 300px;
-}
-
-.section .callout {
-	position: absolute;
-	left: calc(100% + 30px);
-	top: 50px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.section .callout span {
-	display: block;
-	font-style: italic;
-	font-size: .8em;
-	line-height: 120%;
-}
-
 a,
 a:visited,
 a:hover,
@@ -95,7 +76,6 @@ sup {
 	margin: 15px;
 	margin-left: 0px;
 	margin-bottom: 0px;
-	float: left;
 }
 
 .work li p {
@@ -121,7 +101,7 @@ sup {
 
 #footnotes {
 	border-top: 1px solid #C0C0C0;
-	margin-top: 150px;
+	margin-top: 50px;
 	font-size: .8em;
 }
 
